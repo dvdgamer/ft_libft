@@ -50,7 +50,7 @@ char	*ft_itoa(int n)
 	}
 	while (num != 0)
 	{
-		return_string[len] = num % 10 + '0';
+		return_string[len] = (num % 10) + '0';
 		num = num / 10;
 		len--;
 	}
