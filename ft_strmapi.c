@@ -32,20 +32,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return_string[i] = '\0';
 	return (return_string);
 }
-
-//#include <stdio.h>
-//
-//char	test_function(unsigned int i, char c)
-//{
-//	printf("%d", i);
-//	return (c + 1);
-//}
-//
-//int main ()
-//{
-//	char test[] = "tested";
-//
-//    printf("%s\n", ft_strmapi(test, test_function));
-//    return 0;
-//}
-//

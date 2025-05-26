@@ -27,19 +27,3 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (NULL);
 }
-
-//#include <string.h>
-//#include <stdio.h>
-//
-//int main ()
-//{
-//	char str[] = "Hello";
-//	char *src = "abbb";
-//
-//	printf ("%s\n", strrchr(str, 'l'));
-//	printf ("%s\n", ft_strrchr(str, 'l'));
-//	printf ("%s\n", strrchr(src, 'a'));
-//	printf ("%s\n", ft_strrchr(src, 'a'));
-//	// printf ("%s\n", str);
-//	return 0;
-//}

@@ -13,22 +13,9 @@
 
 size_t	ft_strlen(const char *str)
 {
-	size_t	i;
+	const char	*ptr = str;
 
-	i = 0;
-	while (*str++)
-	{
-		i++;
-	}
-	return (i);
+	while (*ptr)
+		ptr++;
+	return (ptr - str);
 }
-
-//#include <stdio.h>
-//
-//int main ()
-//{
-//	char test[] = "Hello";  
-//  printf("%ld", ft_strlen(test));
-//  return 0;
-//}
-//
