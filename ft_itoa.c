@@ -6,27 +6,27 @@
 /*   By: dponte <dponte@student.codam.nl>            +#+                      */
 /*                                                  +#+                       */
 /*   Created: 2025/05/12 16:35:55 by dponte       #+#    #+#                  */
-/*   Updated: 2025/05/12 17:28:15 by dponte       ########   odam.nl          */
+/*   Updated: 2025/06/09 13:06:45 by dponte       ########   odam.nl          */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static int	count_digits(int n)
-{
-	int	count;
-
-	count = 0;
-	if (n <= 0)
-		count = 1;
-	while (n != 0)
-	{
-		n = n / 10;
-		count++;
-	}
-	return (count);
-}
+/* static int	count_digits(int n) */
+/* { */
+/* 	int	count; */
+/**/
+/* 	count = 0; */
+/* 	if (n <= 0) */
+/* 		count = 1; */
+/* 	while (n != 0) */
+/* 	{ */
+/* 		n = n / 10; */
+/* 		count++; */
+/* 	} */
+/* 	return (count); */
+/* } */
 
 char	*ft_itoa(int n)
 {
@@ -35,7 +35,7 @@ char	*ft_itoa(int n)
 	char	*return_string;
 
 	num = n;
-	len = count_digits(n);
+	len = ft_count_digits(n);
 	return_string = malloc((len + 1) * sizeof(char));
 	if (!return_string)
 		return (NULL);

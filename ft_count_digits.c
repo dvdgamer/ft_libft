@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       ::::::::             */
-/*   ft_putnbr_fd.c                                    :+:    :+:             */
+/*   ft_count_digits.c                                 :+:    :+:             */
 /*                                                    +:+                     */
 /*   By: dponte <dponte@student.codam.nl>            +#+                      */
 /*                                                  +#+                       */
-/*   Created: 2025/05/13 13:57:38 by dponte       #+#    #+#                  */
-/*   Updated: 2025/05/13 14:16:10 by dponte       ########   odam.nl          */
+/*   Created: 2025/06/09 13:02:53 by dponte       #+#    #+#                  */
+/*   Updated: 2025/06/09 13:03:06 by dponte       ########   odam.nl          */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <unistd.h>
-
-void	ft_putnbr_fd(int n, int fd)
+int	ft_count_digits(int n)
 {
-	long	num;
+	int	count;
 
-	num = n;
-	if (num < 0)
+	count = 0;
+	if (n <= 0)
+		count = 1;
+	while (n != 0)
 	{
-		ft_putchar_fd('-', fd);
-		num = -num;
+		n = n / 10;
+		count++;
 	}
-	if (num >= 10)
-		ft_putnbr_fd(num / 10, fd);
-	ft_putchar_fd((num % 10) + '0', fd);
+	return (count);
 }

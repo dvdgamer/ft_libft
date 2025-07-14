@@ -77,5 +77,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /*Extra functions */
 void	ft_del_content(void *content);
+int		ft_count_digits(int n);
 
 #endif
