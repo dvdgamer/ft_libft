@@ -23,6 +23,7 @@ int		ft_isprint(int c);
 int		ft_isspace(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+void	ft_putchar(char c);
 
 /* Memory functions */
 void	*ft_memset(void *s, int c, size_t n);
