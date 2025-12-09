@@ -1,0 +1,3 @@
+[submodule "my-own-printf"]
+	path = my-own-printf
+	url = git@github.com:dvdgamer/my-own-printf.git
