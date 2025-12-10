@@ -1,31 +1,23 @@
-NAME = libftprintf.a
-LIBFT = libft/libft.a
+NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRC = ft_printf.c ft_putfunctions.c
-
+SRC = $(shell find . -maxdepth 1 -name '*.c')
 OBJS = $(SRC:.c=.o)
 
 .PHONY: all clean fclean re
 
 all: $(NAME)
 
-%.o: %.c ft_printf.h
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(LIBFT):
-	make -C libft
-
-$(NAME): $(LIBFT) $(OBJS)
-	cp $(LIBFT) $(NAME)
+$(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)
-	make -C libft clean
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
-	make -C libft fclean
 
 re: fclean all
